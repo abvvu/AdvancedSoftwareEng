@@ -11,7 +11,7 @@
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.*;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 
@@ -36,7 +36,7 @@ public final class gui extends ab {
               pst.execute();
            
                    JOptionPane.showMessageDialog(null, "Next Data");
-        }catch(Exception b){
+        }catch(SQLException | HeadlessException b){
             
         }
     } 
@@ -55,7 +55,7 @@ public final class gui extends ab {
               pst.execute();
            
                    JOptionPane.showMessageDialog(null, "Saved");
-        }catch(Exception b){
+        }catch(SQLException | HeadlessException b){
             
         }
     } 
@@ -69,6 +69,7 @@ public final class gui extends ab {
     JTextField t2;
     JButton btnBack;
     JButton btnSave ;
+    //JTable table;
     
     
     
@@ -106,6 +107,7 @@ public final class gui extends ab {
         p.add(t2);
         p.add(btnBack);
         p.add(btnSave);
+        //p.add(table);
 
         //Adding panel onto frame
         f.add(p);
@@ -142,9 +144,10 @@ public final class gui extends ab {
             
       
     }
-    public void initComponents(){
+   public void initComponents(){
       btnSave.addActionListener(new java.awt.event.ActionListener() {
     
+    @Override
     public void actionPerformed(java.awt.event.ActionEvent evt) {
            btnSaveActionPerformed(evt);
     }
@@ -152,6 +155,7 @@ public final class gui extends ab {
       
       btnBack.addActionListener(new java.awt.event.ActionListener() {
     
+    @Override
     public void actionPerformed(java.awt.event.ActionEvent evt) {
            btnBackActionPerformed(evt);
     }

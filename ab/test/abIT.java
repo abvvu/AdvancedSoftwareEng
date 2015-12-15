@@ -45,7 +45,7 @@ public class abIT {
         ab instance = new ab();
         instance.connect();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -57,7 +57,7 @@ public class abIT {
         String[] agrs = null;
         ab.main(agrs);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }
